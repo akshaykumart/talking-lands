@@ -58,5 +58,40 @@ steps:
 
    ![image](https://github.com/user-attachments/assets/083859f3-1140-4354-83b5-bc828f254f64)
 
+## Monitoring
+
+1. Create the k8s manifests for prometheus deploymemt and service 
+
+   ` $ kubectl create namespace monitoring `
+
+   ` $ kubectl get namespace `
+
+   ![image](https://github.com/user-attachments/assets/0f5dc543-7a5d-454c-bef3-3d1fe103b400)
+
+
+   ` $ kubectl apply -f monitoring/prometheus-config.yaml `
+
+   ` $ kubectl get config -n monitoring `
+
+   ![image](https://github.com/user-attachments/assets/34d9a688-0e96-4b08-83cd-ff3be972f93e)
+
+
+   ` $ kubectl apply -f monitoring/prom-deploy.yaml `
+  
+   ` $ kubectl get deployments -n monitoring `
+ 
+   ` $ kubectl get pods -n monitoring `
+
+   ![image](https://github.com/user-attachments/assets/caec54c6-00f4-4c9d-82e0-bde697aea41b)
+
+   ` $ kubectl apply -f monitoring/prom-service.yaml `
+
+   ` $ kubectl get svc -n monitoring `
+
+   ![image](https://github.com/user-attachments/assets/58e31a0e-773b-445a-89af-a342e7c9fe01)
+
+
+
+
 
 
