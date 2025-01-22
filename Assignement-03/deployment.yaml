@@ -17,7 +17,3 @@ spec:
         image: akshaykumart/talking-landing:latest
         ports:
         - containerPort: 5000
-        readinessProbe:
-          httpGet:
-            path: /metrics
-            port: 5000
