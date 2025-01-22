@@ -90,6 +90,39 @@ steps:
 
    ![image](https://github.com/user-attachments/assets/58e31a0e-773b-445a-89af-a342e7c9fe01)
 
+   ` $ kubectl apply -f monitoring/grafana-deploy.yaml `
+
+   ` $ kubectl get deployments -n monitoring `
+ 
+   ![image](https://github.com/user-attachments/assets/c0417ff4-6d36-4c20-9acb-8a01eea1d7d8)
+
+   ` $ kubectl apply -f monitoring/grafana-service.yaml `
+
+   ` $ kubectl get svc -n monitoring `
+
+   ![image](https://github.com/user-attachments/assets/d7fffcd9-54f6-4f88-8ae1-43aa4cadb91b)
+
+   # To access the prometheus UI
+
+   ` $ kubectl port-forward svc/prometheus 9090:9090 -n monitoring `
+  
+   ` $ http://localhost:9090 `
+  
+   ![image](https://github.com/user-attachments/assets/bf027e0e-e7da-4fa3-b481-eabd0841587c)
+
+   # To access the grafana UI
+
+   ` $ kubectl port-forward svc/grafana 3000:3000 -n monitoring `
+
+   ` $ http://localhost:3000 `
+ 
+   ![image](https://github.com/user-attachments/assets/5f24cbad-cc26-41d4-a2e3-9f3692ae3a5a)
+
+   
+   
+
+
+
 
 
 
