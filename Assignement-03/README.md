@@ -22,7 +22,7 @@ steps:
 
 4. Push the docker image to registry ( dockerhub )
 
-   ` $ docker push -t akshaykumart/talking-landing:latest`
+   ` $ docker push akshaykumart/talking-landing:latest`
 
    ![image](https://github.com/user-attachments/assets/bfcdd8e0-779e-403c-a980-aba7e0127bdd)
 
